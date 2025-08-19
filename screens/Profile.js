@@ -153,6 +153,8 @@ export default function Profile({ onRestartOnboarding }) {
   const handleLogout = useCallback(async () => {
     try {
       await AsyncStorage.removeItem(STORAGE_KEY);
+      navigation.navigate("Onboarding");
+  
     } finally {
       onRestartOnboarding?.();
     }
